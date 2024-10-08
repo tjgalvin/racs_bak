@@ -60,14 +60,14 @@ DATA_DIR=${3:-"/askapbuffer/scott/askap-scheduling-blocks/${SBID}"}
 
 
 ## Load up appropriate modules
-module load rclone/1.62.2
+module load rclone/1.63.1
 
 ## Rclone config
 # Assuming the remote is called 'askap' 
 #   - need to ensure this is in the rclone config
 # Here we're also locking in the bucket name to be 'RACSlow3-backup'
-BUCKET_NAME="racslow3-backup"
-REMOTE_NAME="askap"
+BUCKET_NAME="racsmid2-backup"
+REMOTE_NAME="askaprt"
 
 
 ## Ensure bucket exists
