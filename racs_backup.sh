@@ -60,7 +60,7 @@ DATA_DIR=${3:-"/askapbuffer/scott/askap-scheduling-blocks/${SBID}"}
 
 
 ## Load up appropriate modules
-module load rclone/1.63.1
+module load rclone/1.68.1
 
 ## Rclone config
 # Assuming the remote is called 'askap' 
