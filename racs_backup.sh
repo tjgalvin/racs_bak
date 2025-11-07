@@ -82,9 +82,6 @@ tar \
     -Wcf ${SBID}.tar \
     ${DATA_DIR}
 
-echo "Examining ${SBID}.tar.gz for correctly formatted file table"
-tar -tf "${SBID}.tar"
-
 echo "Uploading ${SBID}.tar.gz..."
 rclone \
     copy \
