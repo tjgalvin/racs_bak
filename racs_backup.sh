@@ -77,15 +77,13 @@ rclone mkdir ${REMOTE_NAME}:${BUCKET_NAME}
 ## Copy the data to the bucket
 # TODO: Decide on 'copy' or 'move'
 # The latter will delete the data from disk on success
-## Use pigz for compression
 echo "Tarring ${DATA_DIR}..."
 tar \
-    --use-compress-program="pigz --best --recursive" \
-    -cf ${SBID}.tar.gz \
+    -Wcf ${SBID}.tar \
     ${DATA_DIR}
 
 echo "Examining ${SBID}.tar.gz for correctly formatted file table"
-tar -tf "${SBID}.tar.gz"
+tar -tf "${SBID}.tar"
 
 echo "Uploading ${SBID}.tar.gz..."
 rclone \
